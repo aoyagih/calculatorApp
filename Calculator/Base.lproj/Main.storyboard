@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l2W-gh-2de">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--計算機アプリ-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,16 +76,67 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="計算機アプリ" id="Ce9-MX-1Cl"/>
                     <connections>
                         <outlet property="firstTextField" destination="2XL-rx-3Gt" id="cTJ-OA-uPb"/>
                         <outlet property="resultLabel" destination="Eku-2w-sdp" id="csU-JS-DIR"/>
                         <outlet property="secondTextField" destination="5W4-2h-IO9" id="5oU-rH-tL7"/>
                         <outlet property="segmentedControl" destination="E0e-qm-y92" id="gEv-Qq-kgS"/>
+                        <segue destination="orX-r8-Yfp" kind="show" identifier="ResultSegue" id="lgk-1C-KWs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="116.49175412293854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vqK-nc-ZoE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l2W-gh-2de" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HZU-tU-ea0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="N0O-pp-IAp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yiv-fD-heT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="136.80000000000001" y="116.49175412293854"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="hKF-Px-FjO">
+            <objects>
+                <viewController id="orX-r8-Yfp" customClass="ResultViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="su6-s6-g0c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果は…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysc-E0-8Py">
+                                <rect key="frame" x="77" y="297.5" width="221.5" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ysc-E0-8Py" firstAttribute="centerY" secondItem="su6-s6-g0c" secondAttribute="centerY" id="cKy-HG-ZWd"/>
+                            <constraint firstItem="ysc-E0-8Py" firstAttribute="centerX" secondItem="su6-s6-g0c" secondAttribute="centerX" id="ztS-8L-9Fa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5j0-Mz-P4z"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YBX-4d-hoJ"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="ysc-E0-8Py" id="3PK-Zr-nrJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M10-cd-h8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1977" y="116"/>
         </scene>
     </scenes>
 </document>

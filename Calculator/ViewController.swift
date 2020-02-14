@@ -65,8 +65,21 @@ class ViewController: UIViewController {
         }
         print(result)
         resultLabel.text = String(result)
+        
+        self.performSegue(withIdentifier: "ResultSegue", sender: result)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //画面遷移によって処理を切り変える
+        if segue.identifier == "ResultSegue"{
+            let next = segue.destination as? ResultViewController
+            let result = sender as! Int
+            next?.result = result
+        }
+//        if segue.identifier == "hogeSegue"{
+//
+//        }
+    }
     
     func showAlert(title: String, message: String)  {
         let alert:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
