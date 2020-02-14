@@ -23,6 +23,18 @@ class ViewController: UIViewController {
         //計算ボタンをタップしたときの処理
         print("didTapCalculate")
         
+        
+        if self.firstTextField.text?.count == 0{
+            showAlert(title: "Error", message: "上のテキストに文字を入れてください" )
+            print("returnしました")
+            return
+        }
+        if self.secondTextField.text?.count == 0{
+            showAlert(title: "Error", message: "下のテキストに文字を入れてください")
+            print("returnしました")
+            return
+        }
+        
         let first = Int(self.firstTextField.text ?? "")!
         let second = Int(self.secondTextField.text ?? "")!
         //print(first)
@@ -53,6 +65,14 @@ class ViewController: UIViewController {
         }
         print(result)
         resultLabel.text = String(result)
+    }
+    
+    
+    func showAlert(title: String, message: String)  {
+        let alert:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action:UIAlertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
 }
