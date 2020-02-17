@@ -50,8 +50,8 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果は…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eku-2w-sdp">
-                                <rect key="frame" x="30" y="54.5" width="315" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="30" y="71.5" width="315" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -67,7 +67,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wTB-r0-XVm" secondAttribute="trailing" constant="30" id="bMY-FS-RbP"/>
                             <constraint firstItem="2XL-rx-3Gt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="cUF-p8-qA6"/>
                             <constraint firstItem="wTB-r0-XVm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gnA-55-hNb"/>
-                            <constraint firstItem="2XL-rx-3Gt" firstAttribute="top" secondItem="Eku-2w-sdp" secondAttribute="bottom" constant="30" id="kEo-E3-T3N"/>
+                            <constraint firstItem="2XL-rx-3Gt" firstAttribute="top" secondItem="Eku-2w-sdp" secondAttribute="bottom" constant="20" id="kEo-E3-T3N"/>
                             <constraint firstItem="Eku-2w-sdp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ltM-EF-LEG"/>
                             <constraint firstItem="5W4-2h-IO9" firstAttribute="top" secondItem="2XL-rx-3Gt" secondAttribute="bottom" constant="30" id="nQg-g8-Ks6"/>
                             <constraint firstItem="E0e-qm-y92" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="oU2-ya-oXc"/>

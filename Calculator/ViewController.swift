@@ -58,7 +58,13 @@ class ViewController: UIViewController {
             result = first * second
             break
         case 3:
-            result = first / second
+            if second == 0{
+                showAlert(title: "Error", message: "0で割れません")
+                print("returnしました")
+                return
+            }else{
+                result = first / second
+            }
             break
         default:
             break
